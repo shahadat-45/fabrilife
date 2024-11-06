@@ -1,0 +1,32 @@
+@media (max-width: 576px){
+    /*=============Home Page==================*/
+    nav{
+        height: 70px;
+    
+        & form.d-flex{
+            width: 60%;
+            height: 32px;
+        }
+        & .container-fluid {
+            padding-left: 0;
+            margin-top: 15px;
+            & #navbarSupportedContent {
+                background-color: white;
+                & div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                & button.btn {
+                    margin-right: unset;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 600px) and (max-width:799px){    
+}
+@media all and (min-width: 800px) and (max-width:1024px){    
+}
+@media all and (min-width: 1025px) and (max-width: 1399px){    
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shop</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="Images/fabrilife.svg" alt="logo" width="180px" height="36px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
+              <li class="nav-item dropdown active" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Shop
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="d-flex">
+                        <li>
+                          <ul>
+                              <li>abcd</li>
+                              <li>efgh</li>
+                              <li>ijkl</li>
+                              <li>mnop</li>
+                          </ul>
+                        </li>
+                        <li style="background-color: #f7f7f7;">
+                          <ul>
+                              <li>abcd</li>
+                              <li>efgh</li>
+                              <li>ijkl</li>
+                              <li>mnop</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <ul>
+                              <li>abcd</li>
+                              <li>efgh</li>
+                              <li>ijkl</li>
+                              <li>mnop</li>
+                          </ul>
+                        </li>
+                        <li style="background-color: #f7f7f7;">
+                          <ul>
+                              <li>abcd</li>
+                              <li>efgh</li>
+                              <li>ijkl</li>
+                              <li>mnop</li>
+                          </ul>
+                        </li>
+                    </div>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search Products by Titles or Tags" aria-label="Search">
+              <button class="border-0 bg-transparent" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>            
+            <button class="btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></button>
+          </div>
+        </div>
+    </nav>
+    <main id="shop-content">
+        <!-- Sidebar for Category List -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li class="ais-RefinementList-item ais-RefinementList-item--selected">
+                    <div>
+                        <div onclick="scrollToTop()" class="facet-item level2">
+                            <input type="checkbox" class="ais-RefinementList-checkbox usual-checkbox" value="Half Sleeve T-shirt" checked >
+                                Half Sleeve T-shirt
+                            <span class="facet-count">304</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="ais-RefinementList-item">
+                    <div>
+                        <div onclick="scrollToTop()" class="facet-item level3">
+                            <input type="checkbox" class="ais-RefinementList-checkbox" value="Blank">
+                                Blank
+                            <span class="facet-count">51</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="ais-RefinementList-item">
+                    <div>
+                        <div onclick="scrollToTop()" class="facet-item level3">
+                            <input type="checkbox" class="ais-RefinementList-checkbox" value="Blank">
+                                Blank
+                            <span class="facet-count">51</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="ais-RefinementList-item">
+                    <div>
+                        <div onclick="scrollToTop()" class="facet-item level3">
+                            <input type="checkbox" class="ais-RefinementList-checkbox" value="Blank">
+                                Blank
+                            <span class="facet-count">51</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="ais-RefinementList-item"><div><div onclick="scrollToTop()" class="facet-item level2"><input type="checkbox" class="ais-RefinementList-checkbox" value="Full Sleeve T-shirt">Full Sleeve T-shirt<span class="facet-count">127</span></div></div></li>
+            </ul>
+        </aside>
+
+        <!-- Main Section for Products -->
+        <section id="shop-products">
+            <div class="product-filters">
+                <div id="tagbox">
+                    <span class="ais-tag-item header">Tags</span><span class="ais-tag-item">premium</span><span class="ais-tag-item">primium</span><span class="ais-tag-item"> tshirt</span><span class="ais-tag-item"> tee</span><span class="ais-tag-item"> blank</span><span class="ais-tag-item"> plain</span><span class="ais-tag-item"> shirt</span><span class="ais-tag-item"> mens</span><span class="ais-tag-item"> men</span><span class="ais-tag-item"> man</span><span class="ais-tag-item"> genji</span><span class="ais-tag-item"> chele</span><span class="ais-tag-item">combo</span><span class="ais-tag-item">silver</span><span class="ais-tag-item">red</span><span class="ais-tag-item">red wine</span><span class="ais-tag-item">charcoal</span><span class="ais-tag-item">yellow</span><span class="ais-tag-item">tshirt</span><span class="ais-tag-item">olive</span><span class="ais-tag-item clear">Clear Tags</span>
+                </div>
+            </div>
+
+            <div class="product-grid row">
+                <!-- Product Items -->
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <div class="sale"><span>SALE</span></div>
+                         <div style="display:block" class="free_delivery"><img src="Images/external-flash.png"><span>FREE DELIVERY</span></div>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 p-2 pt-0">
+                     <div class="card product-card">
+                         <a class="no-style-link" href="">
+                             <div class="gallerythumbWrapper gallerythumbWrapperLoaded" style="background: url('/img/product-loader.svg') no-repeat center, linear-gradient(135deg, #111111 0%, #e0e0e0 100%);">
+                                 <img class="gallerythumb gallerythumbLoaded" src="Images/61507e01f2680-square.jpg" width="100%" alt="Card image">
+                                 <h6 class="truncate">Mens Premium T-Shirt - Vibrant</h6>
+                                 <p class="non_mediacal d-none">Non Medical</p>
+                                 <div style="display:block" class="discounted_amount">
+                                     <span>Save Tk. 86</span>
+                                 </div>
+                                 <p class="card-text">
+                                    <span></span>
+                                    <br>
+                                    <span>৳685</span>
+                                     ৳599
+                                </p>
+                                 <!-- <div class="like-box-gallery" style="padding: 0px;">
+                                     <span  class="like-count likes-for-72641"> 0</span>
+                                 </div> -->
+                             </div>
+                         </a>
+                         <!-- <div class="products-like-button like-id-72641 d-none" >
+                             <i class="fa fa-heart-o"></i>
+                             <span> 0</span>
+                         </div>
+                         <div class="products-share-button d-none">
+                             <i class="fa fa-share"></i> 
+                             Share
+                         </div> -->
+                         <div class="products-cart-button ">
+                         <!-- data-productkey="72641" data-image="/products/65708ff07a95b-square.jpg" data-title="Mens Premium T-Shirt - Vibrant" data-color="#111111" data-url="/product/72641-mens-premium-t-shirt-vibrant" -->
+                             <i class="fa fa-cart-plus"></i>
+                                 Buy Now 
+                                 <!-- <i class="products-cart-button-loader fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> -->
+                         </div>
+                     </div>
+                 </div>
+                <!-- More products as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container mt-4">
+            <div id="footer" class="container-fluid no-margin-padding">
+              <div class="row newsletter">
+                  <div class="ftbl d-flex">
+                      <div class="col-md-6 text-center">
+                          <div class="pull-left">
+                              <div class="ftbl-text"><i class="fa fa-envelope-o"></i>GET SPECIAL DISCOUNTS IN YOUR INBOX</div>
+                              <div class="form-inline pull-left newsletter-form">
+                                <input class="form-control mail-subscribe email-submit-input" type="email" name="email" placeholder="Enter email to get offers, discounts and more." required="">
+                                <button class="btn btn-sm btn-warning mail-subscribe-btn" type="submit">Subscribe</button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6 text-center">
+                          <div class="pull-left">
+                              <div class="ftbl-text"><i class="fa fa-phone"></i>FOR ANY HELP YOU MAY CALL US AT</div>
+                              <div style="text-align: left; color: #aaa; margin-left: 20px">
+                                +8809677666888<br>
+                                Open 24 Hours a Day, 7 Days a week
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row footer_menu_item">
+                  <div class="ftbl">
+                      <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                          <div style=" color: orange">FABRILIFE</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="/user-specification">ABOUT US</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="/terms">TERMS &amp; CONDITIONS</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="/privacy-policy">PRIVACY POLICY</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="/refund-policy">CANCELLATION &amp; RETURN POLICY</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="/faq">FAQS</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="/contact-us">CONTACT US</a></li>
+                          <!-- <ul style="margin: 0px; padding: 15px 0 0 0;">
+                              <li class="text-center" style="list-style:none; display: inline-block; background: #000; border-radius: .7rem; width: 1.4rem; height: 1.4rem;">
+                                  <a class="fabrilife_social" style="color: white;" href="https://www.facebook.com/fabrilife" title="Facebook">
+                                     <i class="fa fa-facebook"></i>
+                                 </a>
+                              </li>
+                              <li class="text-center" style="list-style:none; display: inline-block; background: #000; border-radius: .7rem; width: 1.4rem; height: 1.4rem;">
+                                  <a class="fabrilife_social" style="color: white;" href="https://twitter.com/fabrilife" title="Twitter">
+                                     <i class="fa fa-twitter"></i>
+                                 </a>
+                              </li>
+                              <li class="text-center" style="list-style:none; display: inline-block; background: #000; border-radius: .7rem; width: 1.4rem; height: 1.4rem;">
+                                  <a class="fabrilife_social" style="color: white;" href="https://www.youtube.com/channel/UCLooFQFh-FJvbMKIBXQszxQ" title="Google Plus">
+                                     <i class="fa fa-youtube"></i>
+                                  </a>
+                              </li>
+                              <li class="text-center" style="list-style:none; display: inline-block; background: #000; border-radius: .7rem; width: 1.4rem; height: 1.4rem;">
+                                  <a class="fabrilife_social" style="color: white;" href="https://www.instagram.com/fabrilife" title="Instagram">
+                                     <i class="fa fa-instagram"></i>
+                                 </a>
+                              </li>
+                              <li class="text-center" style="list-style:none; display: inline-block; background: #000; border-radius: .7rem; width: 1.4rem; height: 1.4rem;">
+                                 <a class="fabrilife_social" style="color: white;" href="https://www.pinterest.com/shajgoj/?eq=shajgoj&amp;etslf=4683" title="Pinterest">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                              </li>
+                          </ul> -->
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                          <div>MEN</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Half%20Sleeve%20T-shirt">SHORT SLEEVE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Full%20Sleeve%20T-shirt">LONG SLEEVE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Polo%20T-shirt">POLO</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Shirt">SHIRT</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Hoodie">HOODIE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Comfy%20Trouser">COMFY TROUSER</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Sports%20Trouser">SPORTS TROUSER</a></li>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                          <div>W0MEN</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Womens%20%3E%20Comfy%20Trouser">COMFY TROUSER</a></li>
+                          <div style="font-weight: bold; font-size: 1rem;">FACE MASK</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Face%20Mask%20%3E%20Professional%207%20Layer%20Mask">CLASSIC</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Face%20Mask%20%3E%20Womens%20Designer%20Edition">DESIGNER EDITION</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Face%20Mask%20%3E%20Kids%20Mask">KIDS MASK</a></li>
+                          <div style="font-weight: bold; font-size: 1rem;">SPORTS</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Mens%20%3E%20Half%20Sleeve%20T-shirt%20%3E%20Sports">JERSEY</a></li>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-12 text-left">
+                          <div>KIDS</div>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Kids%20%3E%20Maggie">MAGGIE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Kids%20%3E%20Half%20Sleeve%20T-shirt">SHORT SLEEVE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Kids%20%3E%20Full%20Sleeve%20T-shirt">LONG SLEEVE</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Kids%20%3E%20Shorts">SHORTS</a></li>
+                          <li class="sub-item-list"><a class="no-style-link" href="https://fabrilife.com/shop?refinementList%5Bcats%5D%5B0%5D=Kids%20%3E%20Trouser">TROUSER</a></li>
+                      </div>
+                  </div>
+              </div>
+              <div class="row copyright">
+                  <div class="title">
+                      FABRILIFE prints a huge variety of custom clothing like T-shirts, hoodies and more. Your order is handled daily with a lot of ❤️️ from BANGLADESH and delivered worldwide!
+                      <br>
+                      <br>
+                      <div>Copyright © 2018 Fabrilife Limited. All Right Reserved</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/homepage.js"></script>
+</body>
+</html>
