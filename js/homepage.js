@@ -11,23 +11,13 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#cat_mobile").owlCarousel({
-      items: 1,               
+      items: 2,               
       loop: true,            
       autoplay: false,       
       autoplayTimeout: 3000, 
       autoplayHoverPause: true
     });
   });
-  
-  // $(document).ready(function(){
-  //     $("#poster_prd01").owlCarousel({
-  //       items: 1,               
-  //       loop: true,            
-  //       autoplay: false,       
-  //       autoplayTimeout: 3000, 
-  //       autoplayHoverPause: true
-  //     });
-  //   });
 
 function toggleCatMobile() {
     const catMobile = document.getElementById('cat_mobile');
@@ -61,21 +51,21 @@ function toggleResponsiveCols() {
           poster_pro02.classList.add('owl-carousel');
           poster_pro03.classList.add('owl-carousel');
           $("#poster_prd01").owlCarousel({
-            items: 1,               
+            items: 2,               
             loop: true,            
             autoplay: false,       
             autoplayTimeout: 3000, 
             autoplayHoverPause: true
           });
           $("#poster_prd02").owlCarousel({
-            items: 1,               
+            items: 2,               
             loop: true,            
             autoplay: false,       
             autoplayTimeout: 3000, 
             autoplayHoverPause: true
           });
           $("#poster_prd03 ").owlCarousel({
-            items: 1,               
+            items: 2,               
             loop: true,            
             autoplay: false,       
             autoplayTimeout: 3000, 
