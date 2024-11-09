@@ -79,3 +79,7 @@ function toggleResponsiveCols() {
 window.addEventListener('load', toggleResponsiveCols);
 window.addEventListener('resize', toggleResponsiveCols);
 
+function toggleForm() {
+  document.getElementById("searchForm").classList.toggle("active");
+}
+

@@ -5,15 +5,24 @@
         box-shadow: 0 0 8px 0 rgba(0,0,0,.4);
         position: fixed;
         z-index: 1000;
+        height: 65px;
     
         & form.d-flex{
-            width: 630px;
-            height: 36px;
+            width: 100%;
+            height: 36px;            
+            & input {
+                margin-right: 0 !important;
+            }
+        }
+        
+        & .d-none-mobile{
+            display: none;
         }
         & .container-fluid {
             justify-content: unset !important;
             & #navbarSupportedContent {
-                justify-content: space-between;            
+                justify-content: space-between;
+                order: 5;          
                 & ul{
                     margin-right: unset !important;
                     & .dropdown .dropdown-toggle {
@@ -24,9 +33,31 @@
                             vertical-align: middle;
                         }
                     }
-                    & .dropdown-menu {top: 60px;}
+                    & .dropdown-menu {
+                        position: absolute;
+                        top: 12px;
+                        left: -280px;
+                        width: 80%;
+                        transition: left 0.5s ease-in-out , visibility 0.5s ease-out;
+                        & .d-flex{
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                        }
+                    }
+                    .dropdown-menu:not(.show) {
+                        display: block !important;
+                        pointer-events: none;
+                        visibility: hidden;
+
+                    }
+                    & .dropdown-menu.show {
+                        display: block;
+                        left: -12px;
+                        pointer-events: all;
+                        visibility: visible;
+                    }
                     & .dropdown-menu li{
-                        min-width: 150px;
+                        min-width: 100px;
                         line-height: 16px;
                         padding: 10px 15px;
                         
@@ -49,33 +80,44 @@
                     }
                 }
                 & form {
-                    position: relative;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    z-index: -5;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transition: all 0.5s ease;             
                     & button {
                         position: absolute;
                         right: 25px;
                         top: 50%;
                         transform: translateY(-50%);
                     }
-                } 
-                & button.btn {
-                    margin-right: 100px;
-                    position: relative;
-                    &
-                    span {
-                        background: #007bff;
-                        font-size: .7rem;
-                        color: white;
-                        padding: 0rem .4em;
-                        border-radius: .25rem;
-                        right: -7px;
-                        position: absolute;
-                        bottom: 3px;
-                    }
                 }
+                & .search-form.active {
+                    top: 65px;
+                    z-index: 1;
+                    visibility: visible;
+                    pointer-events: all; 
+                }
+                
             } 
-    
+            & button.btn {
+                margin-right: 15px;
+                position: relative;
+                & span {
+                    background: #007bff;
+                    font-size: .7rem;
+                    color: white;
+                    padding: 0rem .3em;
+                    border-radius: .25rem;
+                    right: -5px;
+                    position: absolute;
+                    bottom: 3px;
+                }
+            }
             & .navbar-brand{
-                margin-right: unset;
+                margin-right: 20px;
                 order: 2;
             }
             & .navbar-toggler {
@@ -93,7 +135,8 @@
         & .item img{
             height: 250px;
             object-fit: cover;
-        }
+            object-position: 87% 100%;                       
+        }        
     }
     .body-menu{
         height: fit-content;
@@ -764,7 +807,13 @@
 }
 @media all and (min-width: 600px) and (max-width:799px){    
 }
-@media all and (min-width: 800px) and (max-width:1024px){    
+@media all and (min-width: 800px) and (max-width:1024px){  
+    .d-none-width{
+        display: none;
+    }  
 }
-@media all and (min-width: 1025px) and (max-width: 1399px){    
+@media all and (min-width: 1025px) and (max-width: 1399px){
+    .d-none-width{
+        display: none;
+    } 
 }
