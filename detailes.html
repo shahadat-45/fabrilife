@@ -10,25 +10,28 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Product Details</title>
     <style>
 
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid bg-white">
           <a class="navbar-brand" href="index.html"><img src="Images/fabrilife.svg" alt="logo" width="180px" height="36px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown_mobile" aria-controls="navbarSupportedContent" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="order-3 me-1 d-none-width ms-auto" href="cart.html"><button class="btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></button></a>
+          <button class="border-0 bg-transparent order-4 d-none-width me-2" onclick="toggleForm()"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
               <li class="nav-item dropdown active" >
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle d-none-mobile" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Shop
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdown_mobile">
                     <div class="d-flex">
                         <li>
                           <ul>
@@ -66,11 +69,11 @@
                 </ul>
               </li>
             </ul>
-            <form class="d-flex">
+            <form class="d-flex search-form" id="searchForm">
               <input class="form-control me-2" type="search" placeholder="Search Products by Titles or Tags" aria-label="Search">
               <button class="border-0 bg-transparent" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>            
-            <button class="btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></button>
+            </form>     
+            <a href="cart.html"><button class="btn d-none-mobile" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>0</span></button></a>
           </div>
         </div>
     </nav>
@@ -95,7 +98,7 @@
                         <div class="item"><img src="Images/61507e01f2680-square.jpg" alt="Image 4"></div>
                         <div class="item"><img src="Images/638938e7d0d50-square.jpg" alt="Image 5"></div>
                     </div>
-                    <div class="product-related hidden-sm-down">
+                    <div class="product-related hidden-sm-down d-none-mobile">
                         <h5 class="tiny-margin">Frequently Bought Together</h5>
                         <div class="hr"></div>
                         <div class="row">
@@ -129,10 +132,17 @@
                         <strong style="width: 80px; line-height: 36px;font-family: 'Rajdhani', sans-serif;">Select Size: </strong>
                         <ul class="size-selectors-container list-inline asdf">
                             <div class="size-selectors-container list-inline" style="padding: 0px">
-                                <div class="size-selector list-inline-item">M</div>
-                                <div class="size-selector list-inline-item size-selector-selected">L</div>
-                                <div class="size-selector list-inline-item">XL</div>
-                                <div class="size-selector list-inline-item">2XL</div>
+                                <input type="radio" id="size-m" name="size" value="M">
+                                <label for="size-m" class="size-selector list-inline-item">M</label>
+                            
+                                <input type="radio" id="size-l" name="size" value="L" checked>
+                                <label for="size-l" class="size-selector list-inline-item size-selector-selected">L</label>
+                            
+                                <input type="radio" id="size-xl" name="size" value="XL">
+                                <label for="size-xl" class="size-selector list-inline-item">XL</label>
+                            
+                                <input type="radio" id="size-2xl" name="size" value="2XL">
+                                <label for="size-2xl" class="size-selector list-inline-item">2XL</label>                                
                             </div>
                             <span class="no-size-selected" style="color:rgb(230, 28, 28); display:none;">Please select a size &nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></span>
                         </ul>
@@ -148,6 +158,28 @@
                     </div>
                     <button class="order_btn mt-3 btnAddToCart btn btn-success btn-block main-btnAddToCart"><i class="fa-solid fa-cart-shopping me-1"></i></i> &nbsp;Order Now</button>
                     <hr class="my-4" style="border-top: 1px solid #000;">
+                    <div class="product-related hidden-sm-down product-related_mobile d-none">
+                        <h5 class="tiny-margin">Frequently Bought Together</h5>
+                        <div class="hr"></div>
+                        <div class="row">
+                            <div class="d-flex">
+                                <a class="product-link" href="">
+                                    <img style="width: 170px" src="Images/61507e01f2680-square.jpg">
+                                </a>
+                                <div class="product-related-desp">
+                                    <div><a class="product-link" href="">
+                                            <h6 class="mb-1">Mens Premium Sports Edition Trouser- Long Run</h6>
+                                    </a></div>
+                                    <div>
+                                        <div>
+                                            <strong>730</strong>
+                                        </div>
+                                    <button class="add2cartModal btnAddToCart btn btn-black btn-sm px-4 ms-0 py-1 mt-3" style="font-size: 14px" href=""><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="self-product-description">
                         Explanation of Changes
                         setActiveThumbnail Function: Created a function to set the active class on the thumbnail at the given index. This function is called both on thumbnail click and when the main carousel changes.
@@ -169,7 +201,7 @@
             <div class="row">
                 <h4 class="mb-3" style="text-align: center;">You May Also Like</h4>
                 <hr class="my-3">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -183,7 +215,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -197,7 +229,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -211,7 +243,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -225,7 +257,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -239,7 +271,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -253,7 +285,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -267,7 +299,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -281,7 +313,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -295,7 +327,7 @@
                     </div>
                     <button class="add2cartModal related_product_view btn btn-black btn-sm" style="margin-top: 15px; width: 100%" href="/product/71874-mens-urban-edition-premium-full-sleeve-t-shirt-darkness" data-photo="/products/61c08e8cf2cbf-square.jpg" data-productid="71874" data-color="#ffffff" data-title="Mens Urban Edition Premium Full Sleeve T-shirt - Darkness" data-sizes="[&quot;M&quot;,&quot;L&quot;,&quot;XL&quot;,&quot;2XL&quot;]"><i class="fa fa-plus"></i>&nbsp; Add to Cart</button>
                 </div>
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-xs-6">                
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-3 col-6">                
                     <div class="home-product">
                         <a class="product-link" href="">
                             <img src="Images/61507e01f2680-square.jpg" width="100%">
@@ -421,6 +453,8 @@
     <!-- Owl Carousel JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Custom JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/homepage.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -451,12 +485,21 @@
                 smartSpeed: 200,
                 slideSpeed: 500,
                 slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                responsiveRefreshRate: 100
+                responsiveRefreshRate: 100,
+                responsive: {
+                    0:{
+                        items: 3
+                    },
+                    576:{
+                        items: 4
+                    },
+                    800: {
+                        items: 5
+                    }
+                }
             }).on('changed.owl.carousel', syncPosition2);
 
         function syncPosition(el) {
-            //if you set loop to false, you have to restore this next line
-            //var current = el.item.index;
 
             //if you disable loop you have to comment this block
             var count = el.item.count - 1;

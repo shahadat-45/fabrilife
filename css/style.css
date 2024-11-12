@@ -100,7 +100,7 @@ nav{
 }
 #banner {
     & .item img{
-        height: 350px;
+        height: 400px;
     }
 }
 .body-menu{
@@ -916,7 +916,7 @@ nav{
             }
             & .priceDiv{
                 & p{ 
-                    font-family:Arial, Helvetica, sans-serif
+                    font-family:Arial, Helvetica, sans-serif;
                     & span:first-child{
                         color:#949494;
                         font-size: 15px
@@ -952,8 +952,16 @@ nav{
                         -webkit-transition: 0.4s ease-in-out;
                         transition: 0.1s ease-in-out;
                         border-radius: 0px !Important;
+                        transition: all 0.5s ease;
                     }
-                    & .size-selector-selected {
+                    & input[type=radio] {
+                        position: absolute;
+                        z-index: -1;
+                        pointer-events: none;
+                        opacity: 0;
+                    }
+                    & input[type=radio]:checked + label {
+                        transform: scale(1.05);
                         width: auto;
                         min-width: 60px;
                         padding: 5px;
@@ -967,6 +975,7 @@ nav{
                         -webkit-transition: 0.4s ease-in-out;
                         transition: 0.1s ease-in-out;
                         border-radius: 0px !Important;
+                        transition: all 0.3s ease;
                     }
                 }
             }
